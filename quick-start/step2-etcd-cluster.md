@@ -88,6 +88,11 @@ etcdctl \
   --key-file=/etc/kubernetes/ssl/kubernetes-key.pem \
   cluster-health
 ```
+```
+member 5b464a2f75a38e65 is healthy: got healthy result from https://k8s-3:2379
+member 69e952a5a6a6e798 is healthy: got healthy result from https://k8s-1:2379
+member aee4be324f12ea53 is healthy: got healthy result from https://k8s-2:2379
+```
 
 ## trouble-shouting
 vim /var/log/messages 查看错误提示
