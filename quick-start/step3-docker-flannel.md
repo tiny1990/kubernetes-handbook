@@ -38,7 +38,7 @@ etcdctl --endpoints=https://k8s-1:2379,https://k8s-2:2379,https://k8s-3:2379 \
 
 ## 配置docker network
 
-```
+```ini
 cat /usr/lib/systemd/system/docker.service
 [Unit]
 Description=Docker Application Container Engine
