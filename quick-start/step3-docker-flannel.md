@@ -2,13 +2,13 @@
 在k8s-node搭建,根据场景需求
 
 ## 安装flannel
-```
+```shell
 yum install -y flannel
 ```
 可以用``` cat /usr/lib/systemd/system/flanneld.service | grep EnvironmentFile ``` 查看配置文件位置
 
 修改``` /etc/sysconfig/flanneld ```
-```
+```ini
 # Flanneld configuration options  
 
 # etcd url location.  Point this to the server where etcd runs
@@ -61,7 +61,7 @@ KillMode=process
 WantedBy=multi-user.target
 
 ```
-确保/run/flannel/subnet.env 存在
+添加``` EnvironmentFile ``` ``` --bip=${FLANNEL_SUBNET} --mtu=${FLANNEL_MTU} ```  确保/run/flannel/subnet.env 存在
 
 ## 检查flannel docker0是否在一个网段
 ```
